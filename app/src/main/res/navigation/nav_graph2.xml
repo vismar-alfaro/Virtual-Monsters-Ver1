@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/gameHome_dest">
+
+    <fragment
+        android:id="@+id/gameHome_dest"
+        android:name="ph.kodego.alfaro.vismarjay.virtualmonstersver1.gameproper.GameHomeFragment"
+        android:label="@string/game_home_label"
+        tools:layout="@layout/fragment_game_home">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/gameFood_dest" />
+        <action
+            android:id="@+id/action_Game_Home_dest_to_gameTrainFragment"
+            app:destination="@id/gameTrain_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFood_dest"
+        android:name="ph.kodego.alfaro.vismarjay.virtualmonstersver1.gameproper.GameFoodFragment"
+        android:label="@string/game_food_label"
+        tools:layout="@layout/fragment_game_food">
+
+        <action
+            android:id="@+id/action_SecondFragment_dest_to_FirstFragment_dest"
+            app:destination="@id/gameHome_dest" />
+        <action
+            android:id="@+id/action_gameFood_dest_to_gameTrain_dest"
+            app:destination="@id/gameTrain_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameTrain_dest"
+        android:name="ph.kodego.alfaro.vismarjay.virtualmonstersver1.gameproper.GameTrainFragment"
+        android:label="@string/game_train_label"
+        tools:layout="@layout/fragment_game_train" >
+        <action
+            android:id="@+id/action_gameTrainFragment_to_Gam_Food_dest"
+            app:destination="@id/gameFood_dest" />
+        <action
+            android:id="@+id/action_gameTrainFragment_to_Game_Home_dest"
+            app:destination="@id/gameHome_dest" />
+    </fragment>
+</navigation>

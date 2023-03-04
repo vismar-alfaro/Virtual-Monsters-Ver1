@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/optionFragment">
+
+    <fragment
+        android:id="@+id/generateEggFragment"
+        android:name="ph.kodego.alfaro.vismarjay.virtualmonstersver1.newgame.GenerateEggFragment"
+        android:label="fragment_generate_egg"
+        tools:layout="@layout/fragment_generate_egg" >
+        <action
+            android:id="@+id/action_generateEggFragment_to_hatchEggFragment"
+            app:destination="@id/hatchEggFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hatchEggFragment"
+        android:name="ph.kodego.alfaro.vismarjay.virtualmonstersver1.newgame.HatchEggFragment"
+        android:label="fragment_hatch_egg"
+        tools:layout="@layout/fragment_hatch_egg" >
+        <action
+            android:id="@+id/action_hatchEggFragment_to_nav_graph2"
+            app:destination="@id/nav_graph2" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGameFragment"
+        android:name="ph.kodego.alfaro.vismarjay.virtualmonstersver1.newgame.NewGameFragment"
+        android:label="fragment_new_game"
+        tools:layout="@layout/fragment_new_game" >
+        <action
+            android:id="@+id/action_newGameFragment_to_generateEggFragment"
+            app:destination="@id/generateEggFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionFragment"
+        android:name="ph.kodego.alfaro.vismarjay.virtualmonstersver1.OptionFragment"
+        android:label="fragment_option"
+        tools:layout="@layout/fragment_option" >
+        <action
+            android:id="@+id/action_optionFragment_to_nav_graph2"
+            app:destination="@id/nav_graph2" />
+        <action
+            android:id="@+id/action_optionFragment_to_newGameFragment"
+            app:destination="@id/newGameFragment" />
+    </fragment>
+    <include app:graph="@navigation/nav_graph2" />
+</navigation>

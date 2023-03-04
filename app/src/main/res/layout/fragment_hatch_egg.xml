@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newgame.HatchEggFragment">
+
+    <ImageView
+        android:id="@+id/iv_egg"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/normal_egg" />
+
+    <Button
+        android:id="@+id/btn_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countdown_timer"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:text="Open" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="354dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/cardview_dark_background"
+        android:padding="5dp"
+        android:text="TextView"
+        android:textSize="24sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/countdown_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_egg"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="..."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <ImageButton
+        android:id="@+id/ib_proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="18dp"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+</RelativeLayout>
